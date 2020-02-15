@@ -51,11 +51,15 @@ var employees = [
 */
 
 function employeeUpdater(){
-  for(let i = 0; i < array.length; i++){
-    if(arr[i]['firstName'] === 'Theo'){
-      delete arr[i];
+  for(let i = 0; i < employees.length; i++){
+    if(employees[i].firstName === 'Theo'){
+      employees.splice(i, 1);
+    }
+    if (employees[i].firstName === 'Lorie'){
+      employees[i].department = 'HR'
     }
   }
+  return employees;
 }
 
 
